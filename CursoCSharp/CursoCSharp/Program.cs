@@ -1,32 +1,31 @@
-﻿//***   Estándares de C#   ***
-    /*
-    *Los nombres de las clases se capitalizan por cada palabra
-    *Los nombres de las interfaces comienzan con I
-    *Los nombres de los métodos se capitalizan a partir de la primer palabra
-    *Los métodos booleanos comienzan con "Is" 
-    *Los atributos privados comienzan con "_" y se capitaliza a partir de la segunda palabra
-    *
-    */
-
-
-
+﻿
 using CursoCSharp;
 
 Console.WriteLine("Curso de C#");
 Console.WriteLine("===========");
 
-try
+Employee employee1 = new SalaryEmployee()
 {
-    Console.WriteLine(new Date(2011, 11, 11));
-    Console.WriteLine(new Date(2012, 12, 5));
-    Console.WriteLine(new Date(1999, 12, 31));
-    Console.WriteLine(new Date(2001, 3, 1));
-    Console.WriteLine(new Date(2100, 2, 29));
-}
-catch (Exception error)
+    Id = 11010,
+    FirstName = "Angel",
+    LastName = "Modesto",
+    BirthDate = new Date(1999, 12, 2),
+    HiringDate = new Date(2023, 3, 20),
+    IsActive = true,
+    Salary = 105000.50M
+};
+Employee employee2 = new CommissionEmployee()
 {
-    Console.WriteLine(error.Message);
-}
-
+    Id = 11010,
+    FirstName = "Pedro",
+    LastName = "Martinez",
+    BirthDate = new Date(1985, 1, 7),
+    HiringDate = new Date(2023, 3, 13),
+    IsActive = true,
+    Sales = 500000M,
+    CommissionPercentaje = 0.05F
+};
+Console.WriteLine(employee1);
+Console.WriteLine(employee2);
 
 Console.ReadLine();
