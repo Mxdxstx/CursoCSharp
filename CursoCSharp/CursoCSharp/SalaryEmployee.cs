@@ -13,7 +13,7 @@ namespace CursoCSharp
         {
             return Salary;
         }
-
+         
         public override string ToString()
         {
             return $"{base.ToString()}\n\t" +
