@@ -1,6 +1,6 @@
 ﻿namespace CursoCSharp
 {
-    public abstract class Employee
+    public abstract class Employee:IPay
     {
 
 
